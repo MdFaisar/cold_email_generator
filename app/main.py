@@ -4,6 +4,10 @@ from chains import Chain
 from portfolio import Portfolio
 from utils import clean_text
 
+headers ={ 
+   "authorization": st.secrets["groq_api_key"]
+}
+
 def create_streamlit_app(llm, portfolio, clean_text):
     st.title("📧 Cold Email Generator")
     url_input = st.text_input("Enter a URL:", value="https://jobs.nike.com/job/R-46057")
