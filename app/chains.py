@@ -9,10 +9,6 @@ load_dotenv()
 # For streamlit secret key
 groq_api_key = os.environ["groq_api_key"]
 
-headers ={ 
-   "authorization": st.secrets["groq_api_key"]
-}
-
 class Chain:
     def __init__(self):
         self.llm = ChatGroq(
